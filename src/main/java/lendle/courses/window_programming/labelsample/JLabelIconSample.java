@@ -36,8 +36,11 @@ public class JLabelIconSample {
         //1. 利用 url 建立 ImageIcon
         //2. 取得 scaled instance
         //3. 設定到 label1
-        ImageIcon icon=new ImageIcon(new URL());
-        Icon icon2=new ImageIcon(icon.getImage().getScaledInstance());
+        ImageIcon icon = new ImageIcon(new URL("https://vignette.wikia.nocookie.net/animal-jam-clans-1/images/0/03/Tumblr_static_tumblr_mju3pvaga61rat6oko1_500.png/revision/latest?cb=20160423063847"));
+        Image img = icon.getImage().getScaledInstance(64, 32, Image.SCALE_SMOOTH);
+        ImageIcon icon2 = new ImageIcon(img);
+        label1.setIcon(icon2);
+        //Icon icon2=new ImageIcon(icon.getImage().getScaledInstance());
         
         ////////////////////////////
      
